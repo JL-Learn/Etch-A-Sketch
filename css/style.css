@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Lobster', cursive;
+}
+
+:root {
+    --pad-border-small: 5px rgb(34, 30, 30) solid;
+    --pad-border-large: 10px rgb(34, 30, 30) solid;
+    --grid-border: 1px grey solid;
+    --small-size: 300px;
+    --medium-size: 450px;
+    --large-size: 600px;
+}
+
+body {
+    position: relative;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    height: 80px;
+    padding-top: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.form {
+    width: var(--small-size);
+    height: 130px;
+    text-align: center;
+}
+
+label {
+    margin: auto;
+}
+
+.submit {
+    margin-top: 20px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.submit button {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.submit .button2 {
+    width: 70px;
+}
+
+.pad {
+    background-color: grey;
+    border: var(--pad-border-small);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: var(--small-size);
+    width: var(--small-size);
+    display: grid;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.801);
+}
+
+.grid-gap {
+    gap: 1px;
+}
+
+.grid {
+    background-color: white;
+}
+
+.background-color,
+.picked-color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.selected {
+    background-color: rgb(172, 172, 172);
+}
+
+@media (min-width: 500px) {
+    * {
+        font-size: 11px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .form {
+        width: var(--medium-size);
+    }
+    .pad {
+        height: var(--medium-size);
+        width: var(--medium-size);
+    }
+    .submit button {
+        width: 130px;
+    }
+    .submit .button2 {
+        width: 100px;
+    }
+}
+
+@media (min-width: 700px) {
+    * {
+        font-size: 16px;
+    }
+    h1 {
+        padding-top: 30px;
+        height: 150px;
+        font-size: 50px;
+    }
+    .submit {
+        height: 45px;
+    }
+    .submit button {
+        width: 180px;
+    }
+    .submit .button2 {
+        width: 120px;
+    }
+    .pad {
+        height: var(--large-size);
+        width: var(--large-size);
+        border: var(--pad-border-large);
+        margin-bottom: 35px;
+    }
+    .form {
+        width: var(--large-size);
+        height: 180px;
+    }
+    .background-color,
+    .picked-color {
+        width: 23px;
+        height: 23px;
+    }
+}

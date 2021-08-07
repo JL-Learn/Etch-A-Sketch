@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-512-thumb/etch-a-sketch-2202733-1838478.png" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Etch A Sketch</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Etch A Sketch</h1>
+        <form class="form">
+            <div>
+                <input type="range" id="grid-size" name="grid-size" value="16" min="3" max="64" step="1">
+                <label for="grid-size">Deslize para ajustar o tamanho do grid: <output>16</output> x <output>16</output></label>
+                <div class="submit">
+                    <button type="button" class="toggle-grid-gap selected">Alterar grid</button>
+                    <button type="button" class="reset">Apagar Tudo</button>
+                    <button type="button" class="background-color-picker"><span>Cor Fundo:</span><input type="color" class="background-color" value="#cccccc"></button>
+                </div>
+            </div>
+        </form>
+        <div class="pad grid-gap"></div>
+        <div class="submit">
+            <button type="button" class="button2 black">Preto</button>
+            <button type="button" class="button2 rainbow selected">Multi Cor</button>
+            <button class="button2 picker">Customizar:<input type="color" class="picked-color" value="#0ec92a"></button>
+            <button type="button" class="button2 eraser">Apagar</button>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
